@@ -13,7 +13,6 @@ def part1():
     for aIndex, a in enumerate(lines):
         for b in lines[:aIndex]:
             if a + b == 2020:
-                print('Part 1')
                 print(f'{a} * {b} = {a * b}')
                 return a * b
     return -1
@@ -24,11 +23,12 @@ def part2():
         for bIndex, b in enumerate(lines[:aIndex]):
             for c in lines[:bIndex]:
                 if a + b + c == 2020:
-                    print('Part 2')
                     print(f'{a} * {b} * {c} = {a * b * c}')
                     return a * b * c
     return -1
 
 if __name__ == '__main__':
+    print('Part 1')
     part1()
+    print('Part 2')
     part2()
