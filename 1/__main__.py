@@ -16,7 +16,7 @@ def part1():
                 print('Part 1')
                 print(f'{a} * {b} = {a * b}')
                 return a * b
-    return - 1
+    return -1
 
 def part2():
     """Solve Part 2"""
