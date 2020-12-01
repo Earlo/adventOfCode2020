@@ -9,16 +9,28 @@ with open(os.path.join(dirname, 'input'), 'r+') as file:
     lines = [int(x) for x in file.readlines()]
     lines.sort()
 
+DONE = False
 for ai, a in enumerate(lines):
     for b in lines[:ai]:
         if a + b == 2020:
             print('Part 1')
             print(f'{a} * {b} = {a * b}')
+            DONE = True
+            break
+    if DONE:
+        break
 
-
+DONE = False
 for ai, a in enumerate(lines):
     for bi, b in enumerate(lines[:ai]):
         for c in lines[:bi]:
             if a + b + c == 2020:
                 print('Part 2')
                 print(f'{a} * {b} * {c} = {a * b * c}')
+                DONE = True
+                break
+        if DONE:
+            break
+    if DONE:
+        break
+
